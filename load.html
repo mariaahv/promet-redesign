@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Promet</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Promet" />
+    <meta name="keywords" content="promet, ingenieria, construccion" />
+    <meta name="author" content="Promet Peru" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/scrolling-nav.css" rel="stylesheet" />
+    <link href="Content/animate.css" rel="stylesheet" />
+    <link href="Content/style.css" rel="stylesheet" />
+    <link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">
+    <script src="scripts/jquery-3.1.0.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/scrolling-nav.js"></script>
+    <script src="scripts/site.js"></script>
+    <!--[if IE 8]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+  <style type="text/css">
+  .preload{
+  width:100%;
+  height:100%;
+  background:#333;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:1;
+  }
+
+  .logo{
+  width:300px;
+  height:70px;
+  margin:150px auto 50px auto;
+  font-size:50px;
+  text-shadow: -1px 2px 2px #000;
+  text-align:center;
+  color:azure;
+  }
+
+  .loader-frame{
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    position: relative;
+  }
+
+  .loader1 , .loader2{
+    position:absolute;
+    border:5px solid transparent;
+    border-radius: 50%;
+
+  }
+
+
+  .loader1{
+    width:70px;
+    height:70px;
+    border-top: 5px solid azure;
+    border-bottom: 5px solid azure;
+    animation: clockwisespin 2s linear 3;
+  }
+
+  .loader2{
+    width:60px;
+    height:60px;
+    border-left: 5px solid darkturquoise;
+    border-right: 5px solid darkturquoise;
+    top:5px; left:5px;
+    animation: anticlockwisespin 2s linear 3;
+
+  }
+
+  @keyframes clockwisespin{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
+
+  @keyframes anticlockwisespin{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-360deg);}
+  }
+  @keyframes fadeout{
+    from {opacity: 1;}
+    to {opacity:0;}
+  }
+
+</style>
+<script language="javascript" type="text/javascript">
+// $(document).ready(function(){
+// $('#loading').css("display","none");
+// });
+
+// $(window).load(function(){
+// $("#loading").delay(3000).fadeout("slow");
+// });
+
+// $('.load').click(function(event){
+// $("#loading").css("display","block");
+// });
+
+// (function(){
+//   var preload=document.getElementById("preload");
+//   var loading=0;
+//   var id=setInterval(frame,64);
+//
+//   function frame(){
+//     if(loading==100){
+//       clearInterval(id);
+//       window.open("index.html","_self");
+//     }else {
+//       loading=loading + 1;
+//       if(loading==90){
+//         preload.style.animation="fadeout is ease";
+//       }
+//     }
+//   }
+//
+// })();
+
+window.onload=function(){
+  var contenedor=document.getElementById('preload');
+   contenedor.style.visibility="hidden";
+   contenedor.style.opacity='0';
+}
+
+
+</script>
+
+<!-- <div id="loading">
+  <img src="img/wait.gif" alt="" style='margin=0 auto; position:absolute; top:50%; margin:30px 0 0 -30px;'>
+</div> -->
+
+<div class="preload">
+  <div class="logo">
+    ice-<span style="color:darkturquoise;">cubes</span>
+  </div>
+  <div class="loader-frame">
+      <div class="loader1" id="loader1"></div>
+      <div class="loader2" id="loader2"></div>
+
+  </div>
+</div>
+
+</body>
+</html>
